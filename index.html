@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DW E-Portfolio</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e43ba318b5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "ARQeN_qB_kpnlq4-_",
+            });
+        })();
+    </script>
+
+<body>
+    <section id="landing__page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure class="nav__img--container" onclick="toggleModal()">
+                <img id="personal__logo" src="./assets/Tutorial Exclusive Eportfolio/assets/D.png" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class=" nav__link--anchor
+                link__hover-effect
+                link__hover-efect--black"> About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class=" nav__link--anchor
+                        link__hover-effect
+                        link__hover-efect--black"> Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class=" nav__link--anchor 
+                        link__hover-effect
+                        link__hover-efect--black"> Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class=" nav__link--anchor
+                        link__hover-effect
+                        link__hover-efect--black">
+                        <i class="fa-solid fa-circle-half-stroke"></i> </a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title"><b class="teal">I'm David</b></h1>
+            </div>
+            <p class="header__para"> I'm a <b class="teal"> Frontend Software Engineer </b> with a strong
+                work ethic who is extremly maticulous at building warm and welcoming websites.
+                <br>
+                Here is a little bit more <b class="teal click" onclick="toggleModal()"> about me. </b>
+            </p>
+            <div class="social__list">
+                <a href="" class="social__link click">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Kem-12?tab=repositories" target="_blank" class="social__link click">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                </a>
+                <a href="" class="social__link click">
+                    <i class="fa-regular fa-file-pdf"></i>
+                </a>
+            </div>
+        </header>
+        <a href="#">
+        <button  class="mail__button click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope" href="#"></i>
+        </button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer</h4>
+                <p class="modal__para"> I'm a meticulous <b class="teal">Frontend Software Engineer Developer</b> with a
+                    whide array of <b class="teal">skills</b>, I'm thirty two years old and I tend to naturally boost
+                    team moral. <br> I <b class="teal">take great pride in</b> my <b class="teal">work ethic</b> and
+                    have always been <b class="teal">renown</b> amongst bosses, coworkers and community for being <b
+                        class="teal"> dependable</b>,<b class="teal"> flexible</b> and <b class="teal"> efficient</b>.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__languag--img"
+                            src="./assets/Tutorial Exclusive Eportfolio/assets/html E-port.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__languag--img"
+                            src="./assets/Tutorial Exclusive Eportfolio/assets/CSS E-port.webp" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__languag--img"
+                            src="./assets/Tutorial Exclusive Eportfolio/assets/JS E-port.webp" alt="">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__languag--img"
+                            src="./assets/Tutorial Exclusive Eportfolio/assets/React E-port.webp" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i onclick="toggleModal()" class="fa-solid fa-xmark fa-2xl modal__exit click"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Lets have a chat.</h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new opportunities.</h3>
+                <form onsubmit="contact(event)" id="contact__form">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="name"></input>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__item">
+                            <label class="form__item--label">Email</label>
+                            <input class="input" name="user_email" type="email"></input>
+                        </div>
+                        <div>
+                            <label class="form__item--label">Message</label>
+                            <textarea class="input" name="message" type="message"></textarea>
+                        </div>
+                        <button id="contact__submit" class="form__submit">
+                            Send it my way</button>
+                    </div>        
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fa-solid fa-spinner fa-2xl"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">Thanks for the mess
+                    age! I'll be looking forward to speaking to you soon.
+                </div>
+            </div>
+        </div>
+        <img src="./assets/Tutorial Exclusive Eportfolio/assets/circle.svg" class="shape shape--0">
+        <img class="shape shape--1" src="./assets/Tutorial Exclusive Eportfolio/assets/squiggly.svg">
+        <img class="shape shape--2" src="./assets/Tutorial Exclusive Eportfolio/assets/triangle.svg">
+        <img class="shape shape--3 right__side--up" src="./assets/Tutorial Exclusive Eportfolio/assets/semi circle.svg">
+        <img class="shape shape--4" src="./assets/Tutorial Exclusive Eportfolio/assets/circle.svg">
+        <img class="shape shape--5" src="./assets/Tutorial Exclusive Eportfolio/assets/semi circle.svg">
+        <img class="shape shape--6" src="./assets/Tutorial Exclusive Eportfolio/assets/triangle.svg">
+        <img class="shape shape--7" src="./assets/Tutorial Exclusive Eportfolio/assets/squiggly.svg">
+        <img class="shape shape--8" src="./assets/Tutorial Exclusive Eportfolio/assets/circle.svg">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="teal"> projects </span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Tutorial Exclusive Eportfolio/assets/Screenshot 2024-09-18 204100.png"
+                                class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Treact
+                                </h3>
+                                <h4 class="project__description--subtitle">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, explicabo dolor
+                                    velit voluptates suscipit mollitia porro aliquid omnis maiores totam odit sit libero
+                                    nam repudiandae perspiciatis laborum voluptatibus! Consectetur, iusto!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Kem-12?tab=repositories" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-square-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__wrapper">
+                            <img src="./assets/Tutorial Exclusive Eportfolio/assets/Screenshot 2024-09-28 213402.png"
+                                class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Previous E-portfolio
+                                </h3>
+                                <h4 class="project__description--subtitle">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, explicabo dolor
+                                    velit voluptates suscipit mollitia porro aliquid omnis maiores totam odit sit libero
+                                    nam repudiandae perspiciatis laborum voluptatibus! Consectetur, iusto!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Kem-12?tab=repositories" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-square-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__wrapper">
+                            <img class="project__img"
+                                src="/assets/Tutorial Exclusive Eportfolio/assets/Screenshot 2024-09-29 000853.png "
+                                alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Library
+                                </h3>
+                                <h4 class="project__description--subtitle">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, explicabo
+                                    dolor
+                                    velit voluptates suscipit mollitia porro aliquid omnis maiores totam odit sit
+                                    libero
+                                    nam repudiandae perspiciatis laborum voluptatibus! Consectetur, iusto!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/Kem-12?tab=repositories" target="_blank"
+                                        class="project__description--link">
+                                        <i class="fa-brands fa-square-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+
+                <figure class="footer__logo--img">
+                    <img class="project__img" src="./assets/Tutorial Exclusive Eportfolio/assets/D.png" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        Github
+                    </a>
+                    <a href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        LinkedIn
+                    </a>
+                    <a href="#" onclick="toggleModal()"  class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        Email
+                    </a>
+                    <a href="" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright"> Copyright © 2024 David Warner </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
