@@ -406,7 +406,7 @@ header {
   bottom: 32px;
   right: 40px;
   z-index: 100;
-  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.32 );
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.32);
 }
 
 .scroll {
@@ -675,7 +675,7 @@ footer {
   left: 80vw;
 }
 
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .title {
     font-size: 80px;
   }
@@ -698,7 +698,6 @@ footer {
 }
 
 @media (max-width: 550px) {
-  
   .project__description--para {
     display: none;
   }
@@ -728,7 +727,6 @@ footer {
 }
 
 @media (max-width: 400px) {
-  
   #projects {
     margin-top: 160px;
   }

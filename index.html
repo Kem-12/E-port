@@ -25,13 +25,13 @@
                 <img id="personal__logo" src="./assets/Tutorial Exclusive Eportfolio/assets/D.png" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class=" nav__link--anchor
                 link__hover-effect
                 link__hover-efect--black"> About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class=" nav__link--anchor
+                    <a href="#projects" class=" nav__link--anchor
                         link__hover-effect
                         link__hover-efect--black"> Projects</a>
                 </li>
@@ -121,16 +121,16 @@
                 <form onsubmit="contact(event)" id="contact__form">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="name"></input>
+                        <input class="input" name="user_name" type="name" required></input>
                     </div>
                     <div class="form__item">
                         <div class="form__item">
                             <label class="form__item--label">Email</label>
-                            <input class="input" name="user_email" type="email"></input>
+                            <input class="input" name="user_email" type="email" required></input>
                         </div>
                         <div>
                             <label class="form__item--label">Message</label>
-                            <textarea class="input" name="message" type="message"></textarea>
+                            <textarea class="input" name="message" type="message" required></textarea>
                         </div>
                         <button id="contact__submit" class="form__submit">
                             Send it my way</button>
@@ -139,8 +139,7 @@
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fa-solid fa-spinner fa-2xl"></i>
                 </div>
-                <div class="modal__overlay modal__overlay--success">Thanks for the mess
-                    age! I'll be looking forward to speaking to you soon.
+                <div class="modal__overlay modal__overlay--success">Thanks for the message! I'll be looking forward to speaking to you soon.
                 </div>
             </div>
         </div>
