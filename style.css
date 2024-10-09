@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
 
 * {
+  z-index: 3;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -513,6 +514,7 @@ header {
   font-size: 48px;
   margin-bottom: 160px;
   margin-top: 160px;
+  z-index: 10;
 }
 
 .project__img {
@@ -628,6 +630,7 @@ footer {
 
 .shape {
   position: fixed;
+  z-index: 1;
 }
 
 .shape--0 {
