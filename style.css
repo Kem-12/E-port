@@ -631,7 +631,10 @@ footer {
 .shape {
   position: fixed;
   z-index: 1;
+  transform: rotate(360deg)
 }
+
+
 
 .shape--0 {
   top: 15vh;
