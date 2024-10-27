@@ -1,9 +1,9 @@
 
 let isModalOpen = false;
 let contrastToggle = false;
-const scaleFactor = 1 / 20;
+const scaleFactor = 2 / 20;
 
-const rotationFactor = 1 / 4;   
+const rotationFactor = 80 / 4;   
 function moveBackground(event) {
   const shapes =  document.querySelectorAll(".shape");
   let x = event.clientX * scaleFactor;
@@ -14,18 +14,6 @@ function moveBackground(event) {
     const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1;
     shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${rotation * boolInt}deg)`;
-  }
-}
-
-function moveBackground(event) {
-  const shapes =  document.querySelectorAll(".shape");
-  let x = event.clientX * scaleFactor;
-  let y = event.clientY * scaleFactor;
-
-  for (let i = 0; i < shapes.length; ++i) {
-    const isOdd = i % 2 !== 0;
-    const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
   }
 }
 

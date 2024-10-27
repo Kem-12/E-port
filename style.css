@@ -532,7 +532,7 @@ header {
 .project__wrapper:hover .project__img {
   transform: scale(1.07);
   filter: blur(5px);
-  transition: all 600ms;
+  transition: all 450ms;
 }
 
 .project__wrapper:hover .project__description {
@@ -631,7 +631,7 @@ footer {
 .shape {
   position: fixed;
   z-index: 1;
-  transform: rotate(360deg);
+  transform: rotate(720deg);
 }
 
 .shape--0 {
@@ -650,8 +650,8 @@ footer {
 }
 
 .shape--3 {
-  top: 50vh;
-  left: 5vw;
+  top: 60vh;
+  left: 15vw;
 }
 
 .shape--4 {
@@ -661,7 +661,7 @@ footer {
 
 .shape--5 {
   top: 50vh;
-  left: 80vw;
+  left: 90vw;
 }
 
 .shape--6 {
